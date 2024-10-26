@@ -112,7 +112,7 @@ export class AkAdminSidebar extends WithCapabilitiesConfig(AKElement) {
 
         // prettier-ignore
         const sidebarContent: SidebarEntry[] = [
-            ["/if/user/", msg("User interface"), { "?isAbsoluteLink": true, "?highlight": true }],
+            // ["/if/user/", msg("User interface"), { "?isAbsoluteLink": true, "?highlight": true }],
             [null, msg("Dashboards"), { "?expanded": true }, [
                 ["/administration/overview", msg("Overview")],
                 ["/administration/dashboard/users", msg("User Statistics")],
@@ -165,12 +165,17 @@ export class AkAdminSidebar extends WithCapabilitiesConfig(AKElement) {
         };
 
         // prettier-ignore
+        // return html`
+        //     ${this.renderNewVersionMessage()}
+        //     ${this.renderImpersonationMessage()}
+        //     ${map(sidebarContent, renderOneSidebarItem)}
+        //     ${this.renderEnterpriseMenu()}
+        // `;
         return html`
-            ${this.renderNewVersionMessage()}
-            ${this.renderImpersonationMessage()}
-            ${map(sidebarContent, renderOneSidebarItem)}
-            ${this.renderEnterpriseMenu()}
-        `;
+        ${this.renderNewVersionMessage()}
+        ${this.renderImpersonationMessage()}
+        ${map(sidebarContent, renderOneSidebarItem)}
+    `;
     }
 
     renderNewVersionMessage() {

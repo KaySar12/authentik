@@ -12,10 +12,12 @@ GEN_API_TS = "gen-ts-api"
 GEN_API_PY = "gen-py-api"
 GEN_API_GO = "gen-go-api"
 
-pg_user := $(shell python -m authentik.lib.config postgresql.user 2>/dev/null)
-pg_host := $(shell python -m authentik.lib.config postgresql.host 2>/dev/null)
-pg_name := $(shell python -m authentik.lib.config postgresql.name 2>/dev/null)
-
+# pg_user := $(shell python -m authentik.lib.config postgresql.user 2>/dev/null)
+# pg_host := $(shell python -m authentik.lib.config postgresql.host 2>/dev/null)
+# pg_name := $(shell python -m authentik.lib.config postgresql.name 2>/dev/null)
+pg_user := postgres
+pg_host := 172.22.114.200
+pg_name := authentik
 CODESPELL_ARGS = -D - -D .github/codespell-dictionary.txt \
 		-I .github/codespell-words.txt \
 		-S 'web/src/locales/**' \
