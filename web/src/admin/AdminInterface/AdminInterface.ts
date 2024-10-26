@@ -31,7 +31,7 @@ import PFBase from "@patternfly/patternfly/patternfly-base.css";
 import { AdminApi, SessionUser, UiThemeEnum, Version } from "@goauthentik/api";
 
 import "./AdminSidebar";
-
+//test
 @customElement("ak-interface-admin")
 export class AdminInterface extends EnterpriseAwareInterface {
     @property({ type: Boolean })
