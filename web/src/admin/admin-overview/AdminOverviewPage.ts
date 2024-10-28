@@ -131,8 +131,8 @@ export class AdminOverviewPage extends AdminOverviewBase {
                         </div>
                         ${this.renderCards()}
                     </div>
-                    <div class="pf-l-grid__item pf-m-12-col pf-m-6-col-on-xl">
-                        <ak-recent-events pageSize="6"></ak-recent-events>
+                    <div class="pf-l-grid__item pf-m-12-col pf-m-6-col-on-xl shadow">
+                        <ak-recent-events class="ak-recent-events" pageSize="6"></ak-recent-events>
                     </div>
                     <div class="pf-l-grid__item pf-m-12-col">
                         <hr class="pf-c-divider" />

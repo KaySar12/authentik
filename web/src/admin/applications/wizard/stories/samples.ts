@@ -41,9 +41,9 @@ export const dummyAuthenticationFlowsSearch = {
         {
             pk: "2594b1a0-f234-4965-8b93-a8631a55bd5c",
             policybindingmodel_ptr_id: "0bc529a6-dcd0-4ba8-8fef-5702348832f9",
-            name: "Welcome to authentik!",
+            name: "Welcome to nextzen access control!",
             slug: "default-authentication-flow",
-            title: "Welcome to authentik!",
+            title: "Welcome to nextzen access control!",
             designation: "authentication",
             background: "/static/dist/assets/images/flow_background.jpg",
             stages: [
@@ -64,9 +64,9 @@ export const dummyAuthenticationFlowsSearch = {
         {
             pk: "3526dbd1-b50e-4553-bada-fbe7b3c2f660",
             policybindingmodel_ptr_id: "cde67954-b78a-4fe9-830e-c2aba07a724a",
-            name: "Welcome to authentik!",
+            name: "Welcome to nextzen access control!",
             slug: "default-source-authentication",
-            title: "Welcome to authentik!",
+            title: "Welcome to nextzen access control!",
             designation: "authentication",
             background: "/static/dist/assets/images/flow_background.jpg",
             stages: ["3713b252-cee3-4acb-a02f-083f26459fff"],

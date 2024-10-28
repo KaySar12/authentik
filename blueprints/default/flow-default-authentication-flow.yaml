@@ -9,8 +9,8 @@ entries:
     required: false
 - attrs:
     designation: authentication
-    name: Welcome to authentik!
-    title: Welcome to authentik!
+    name: Welcome to nextzen access control!
+    title: Welcome to nextzen access control!
     authentication: none
   identifiers:
     slug: default-authentication-flow

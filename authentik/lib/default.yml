@@ -32,7 +32,7 @@ listen:
     - ::1/128
 
 redis:
-  host: localhost
+  host: 172.22.114.200
   port: 6379
   db: 0
   username: ""

@@ -1,1 +1,20 @@
-/* User customisable */
+/* admin dashboard */
+.pf-c-page__main-section, .pf-c-button.pf-m-plain  {
+    background-color: #ECF4F7!important;
+}
+/* admin dashboard card*/
+.pf-c-card.pf-c-card-aggregate{
+    box-shadow: 6px 0px 4px rgb(96 115 143 / 25%) !important;
+}
+/*admin sidebar*/
+.pf-c-page__sidebar.pf-m-light {
+    box-shadow: 2px 0px 2px rgb(96 115 143 / 15%) !important;
+}
+
+.pf-c-page__main {
+    background-color: #ECF4F7;
+}
+
+.shadow{
+    box-shadow: 6px 0px 4px rgb(96 115 143 / 25%) !important;
+}

@@ -6356,11 +6356,6 @@ Bindings to groups/users are checked against the user of the event.</source>
         <target>현재 <x id="0" equiv-text="${this.impersonation}"/>로 가장(impersonating)하고 있습니다. 클릭해서 정지.</target>
 
       </trans-unit>
-      <trans-unit id="s7031e6928c44cedd">
-        <source>User interface</source>
-        <target>사용자 인터페이스</target>
-
-      </trans-unit>
       <trans-unit id="s8849ece8c65e3a18">
         <source>Dashboards</source>
         <target>대시보드</target>
@@ -6376,11 +6371,6 @@ Bindings to groups/users are checked against the user of the event.</source>
         <target>로그</target>
 
       </trans-unit>
-      <trans-unit id="sc0829ee663ced008">
-        <source>Directory</source>
-        <target>디렉토리</target>
-
-      </trans-unit>
       <trans-unit id="sa81e2cdaf6921adc">
         <source>System</source>
         <target>시스템</target>
@@ -6389,11 +6379,6 @@ Bindings to groups/users are checked against the user of the event.</source>
       <trans-unit id="s5515a897ae98bed9">
         <source>Certificates</source>
         <target>인증서</target>
-
-      </trans-unit>
-      <trans-unit id="s6b79e73ca77148a0">
-        <source>Outpost Integrations</source>
-        <target>Outpost 통합</target>
 
       </trans-unit>
       <trans-unit id="sab85321d3b0840b7">
@@ -6589,11 +6574,6 @@ Bindings to groups/users are checked against the user of the event.</source>
       <trans-unit id="s3cd84e82e83e35ad">
         <source>Please enter your code</source>
         <target>코드를 입력하세요.</target>
-
-      </trans-unit>
-      <trans-unit id="s18b910437b73e8e8">
-        <source>Return to device picker</source>
-        <target>디바이스 선택기로 돌아가기</target>
 
       </trans-unit>
       <trans-unit id="se409d01b52c4e12f">
@@ -7213,10 +7193,6 @@ Bindings to groups/users are checked against the user of the event.</source>
 <trans-unit id="s6f367f5604d5056d">
   <source>Create and bind Stage</source>
   <target>바인드 스테이지 생성</target>
-</trans-unit>
-<trans-unit id="s1a65ee08832fbfe2">
-  <source>Flows and Stages</source>
-  <target>플로우 및 스테이지</target>
 </trans-unit>
 <trans-unit id="s4ba4473f3d4ec896">
   <source>New version available</source>
@@ -8139,9 +8115,6 @@ Bindings to groups/users are checked against the user of the event.</source>
 <trans-unit id="sffef1a8596bc58bb">
   <source>Authenticating...</source>
 </trans-unit>
-<trans-unit id="sd12f594a3184c056">
-  <source>Customization</source>
-</trans-unit>
 <trans-unit id="s363abde8a254ea5f">
   <source>Authentication failed. Please try again.</source>
 </trans-unit>
@@ -8849,6 +8822,27 @@ Bindings to groups/users are checked against the user of the event.</source>
 </trans-unit>
 <trans-unit id="s03e4044abe0b556c">
   <source>User database + Kerberos password</source>
+</trans-unit>
+<trans-unit id="s50372564a3556348">
+  <source>Check settings</source>
+</trans-unit>
+<trans-unit id="s1b39aae91ae4cf6e">
+  <source>Accounts Manager</source>
+</trans-unit>
+<trans-unit id="s54154a8d64a3597b">
+  <source>Captcha stage</source>
+</trans-unit>
+<trans-unit id="s0c250af62ddbf801">
+  <source>When set, adds functionality exactly like a Captcha stage, but baked into the Identification stage.</source>
+</trans-unit>
+<trans-unit id="s98bb2ae796f1ceef">
+  <source>Select another authentication method</source>
+</trans-unit>
+<trans-unit id="s21d95b4651ad7a1e">
+  <source>Enter a one-time recovery code for this user.</source>
+</trans-unit>
+<trans-unit id="s2e1d5a7d320c25ef">
+  <source>Enter the code from your authenticator device.</source>
 </trans-unit>
     </body>
   </file>

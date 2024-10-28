@@ -179,14 +179,16 @@ class UserInterfacePresentation extends AKElement {
         if (!this.isFullyConfigured) {
             throw new Error("ak-interface-user-presentation misused; no valid values passed");
         }
-
+        if (this.canAccessAdmin) {
+            window.location.assign("/if/admin/");
+        }
         return html` <ak-locale-context>
             <ak-enterprise-status interface="user"></ak-enterprise-status>
             <div class="pf-c-page">
                 <div class="background-wrapper" style="${this.uiConfig.theme.background}">
                     ${(this.uiConfig.theme.background || "") === ""
-                        ? html`<div class="background-default-slant"></div>`
-                        : html``}
+                ? html`<div class="background-default-slant"></div>`
+                : html``}
                 </div>
                 <header class="pf-c-page__header">
                     <div class="pf-c-page__header-brand">
@@ -235,8 +237,8 @@ class UserInterfacePresentation extends AKElement {
                 <div class="pf-c-page__drawer">
                     <div
                         class="pf-c-drawer ${this.notificationDrawerOpen || this.apiDrawerOpen
-                            ? "pf-m-expanded"
-                            : "pf-m-collapsed"}"
+                ? "pf-m-expanded"
+                : "pf-m-collapsed"}"
                     >
                         <div class="pf-c-drawer__main">
                             <div class="pf-c-drawer__content">
@@ -256,15 +258,15 @@ class UserInterfacePresentation extends AKElement {
                             </div>
                             <ak-notification-drawer
                                 class="pf-c-drawer__panel pf-m-width-33 ${this
-                                    .notificationDrawerOpen
-                                    ? ""
-                                    : "display-none"}"
+                .notificationDrawerOpen
+                ? ""
+                : "display-none"}"
                                 ?hidden=${!this.notificationDrawerOpen}
                             ></ak-notification-drawer>
                             <ak-api-drawer
                                 class="pf-c-drawer__panel pf-m-width-33 ${this.apiDrawerOpen
-                                    ? ""
-                                    : "display-none"}"
+                ? ""
+                : "display-none"}"
                                 ?hidden=${!this.apiDrawerOpen}
                             ></ak-api-drawer>
                         </div>
@@ -316,8 +318,8 @@ class UserInterfacePresentation extends AKElement {
             >
                 <span
                     class="pf-c-notification-badge ${this.notificationsCount > 0
-                        ? "pf-m-unread"
-                        : ""}"
+                ? "pf-m-unread"
+                : ""}"
                 >
                     <pf-tooltip position="top" content=${msg("Open Notification drawer")}>
                         <i class="fas fa-bell" aria-hidden="true"></i>

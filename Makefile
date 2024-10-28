@@ -15,7 +15,7 @@ GEN_API_GO = "gen-go-api"
 # pg_user := $(shell python -m authentik.lib.config postgresql.user 2>/dev/null)
 # pg_host := $(shell python -m authentik.lib.config postgresql.host 2>/dev/null)
 # pg_name := $(shell python -m authentik.lib.config postgresql.name 2>/dev/null)
-pg_user := postgres
+pg_user := authentik
 pg_host := 172.22.114.200
 pg_name := authentik
 CODESPELL_ARGS = -D - -D .github/codespell-dictionary.txt \
@@ -94,7 +94,7 @@ core-i18n-extract:
 install: web-install website-install core-install  ## Install all requires dependencies for `web`, `website` and `core`
 
 dev-drop-db:
-	dropdb -U ${pg_user} -h ${pg_host} ${pg_name}
+	dropdb -U ${pg_user} -h ${pg_host} ${pg_name} 
 	# Also remove the test-db if it exists
 	dropdb -U ${pg_user} -h ${pg_host} test_${pg_name} || true
 	redis-cli -n 0 flushall

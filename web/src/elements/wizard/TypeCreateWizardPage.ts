@@ -116,9 +116,7 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                     <div class="pf-c-card__body">${type.description}</div>
                     ${requiresEnterprise
                         ? html`<div class="pf-c-card__footer hidden">
-                              <ak-license-notice hidden0
-                              
-                              ></ak-license-notice>
+                              <ak-license-notice hidden></ak-license-notice>
                           </div> `
                         : nothing}
                 </div>`;
@@ -146,7 +144,7 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                         @change=${() => {
                             this.selectDispatch(type);
                         }}
-                        ?disabled=${requiresEnterprise}
+                        
                     />
                     <label class="pf-c-radio__label" for=${`${type.component}-${type.modelName}`}
                         >${type.name}</label
@@ -154,7 +152,7 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                     <span class="pf-c-radio__description"
                         >${type.description}
                         ${requiresEnterprise
-                            ? html`<ak-license-notice></ak-license-notice>`
+                            ? html`<ak-license-notice hidden></ak-license-notice>`
                             : nothing}
                     </span>
                 </div>`;
