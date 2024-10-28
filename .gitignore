@@ -197,7 +197,7 @@ local.env.yml
 
 media/
 *mmdb
-
+geoip/
 .idea/
 /gen-*/
 data/
