@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"linux","arch":"x64","nodeVersion":"v22.10.0","command":"mkdir -p ../../dist/sfe && cp -r dist/sfe/* ../../dist/sfe","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{"[\"/root/dev/authentik/web/packages/sfe\",\"build:sfe\"]":"f96ddb1c1ba2bcfea637d3d4d6f2155019e9298fa634ec3a76fc0a0c533d18bc"},"env":{}}
