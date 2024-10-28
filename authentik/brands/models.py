@@ -28,7 +28,7 @@ class Brand(SerializerModel):
         default=False,
     )
 
-    branding_title = models.TextField(default="authentik")
+    branding_title = models.TextField(default="nextzen")
 
     branding_logo = models.TextField(default="/static/dist/assets/icons/icon_left_brand.svg")
     branding_favicon = models.TextField(default="/static/dist/assets/icons/icon.png")

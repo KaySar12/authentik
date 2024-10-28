@@ -58,12 +58,15 @@ export class VersionStatusCard extends AdminStatusCard<Version> {
         let text = this.value?.versionCurrent;
         const versionFamily = this.value?.versionCurrent.split(".");
         versionFamily?.pop();
-        let link = `https://goauthentik.io/docs/releases/${versionFamily?.join(".")}`;
+        // let link = `https://goauthentik.io/docs/releases/${versionFamily?.join(".")}`;
+        let link = `#`;
         if (this.value?.buildHash) {
             text = this.value.buildHash?.substring(0, 7);
-            link = `https://github.com/goauthentik/authentik/commit/${this.value.buildHash}`;
+            // link = `https://github.com/goauthentik/authentik/commit/${this.value.buildHash}`;
+            link = `#`;
         }
-        return html`<a rel="noopener noreferrer" href=${link} target="_blank">${text}</a>`;
+        // return html`<a rel="noopener noreferrer" href=${link} target="_blank">${text}</a>`;
+        return html`<a rel="noopener noreferrer" href=${link}>Version 1.0</a>`;
     }
 }
 

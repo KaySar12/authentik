@@ -120,31 +120,36 @@ export class AkAdminSidebar extends WithCapabilitiesConfig(AKElement) {
             [null, msg("Applications"), null, [
                 ["/core/applications", msg("Applications"), [`^/core/applications/(?<slug>${SLUG_REGEX})$`]],
                 ["/core/providers", msg("Providers"), [`^/core/providers/(?<id>${ID_REGEX})$`]],
-                ["/outpost/outposts", msg("Outposts")]]],
+                ["/policy/policies", msg("Policies")],
+                // ["/outpost/outposts", msg("Outposts")]
+            ]
+            ],
             [null, msg("Events"), null, [
                 ["/events/log", msg("Logs"), [`^/events/log/(?<id>${UUID_REGEX})$`]],
                 ["/events/rules", msg("Notification Rules")],
                 ["/events/transports", msg("Notification Transports")]]],
-            [null, msg("Customization"), null, [
-                ["/policy/policies", msg("Policies")],
-                ["/core/property-mappings", msg("Property Mappings")],
-                ["/blueprints/instances", msg("Blueprints")],
-                ["/policy/reputation", msg("Reputation scores")]]],
-            [null, msg("Flows and Stages"), null, [
-                ["/flow/flows", msg("Flows"), [`^/flow/flows/(?<slug>${SLUG_REGEX})$`]],
-                ["/flow/stages", msg("Stages")],
-                ["/flow/stages/prompts", msg("Prompts")]]],
-            [null, msg("Directory"), null, [
+            // [null, msg("Advance"), null, [
+                // ["/policy/policies", msg("Policies")],
+                // ["/core/property-mappings", msg("Property Mappings")],
+                // ["/blueprints/instances", msg("Blueprints")],
+                // ["/policy/reputation", msg("Reputation scores")]]],
+            // [null, msg("Flows and Stages"), null, [
+            //     ["/flow/flows", msg("Flows"), [`^/flow/flows/(?<slug>${SLUG_REGEX})$`]],
+            //     ["/flow/stages", msg("Stages")],
+            //     ["/flow/stages/prompts", msg("Prompts")]]],
+            [null, msg("Accounts Manager"), null, [
                 ["/identity/users", msg("Users"), [`^/identity/users/(?<id>${ID_REGEX})$`]],
                 ["/identity/groups", msg("Groups"), [`^/identity/groups/(?<id>${UUID_REGEX})$`]],
                 ["/identity/roles", msg("Roles"), [`^/identity/roles/(?<id>${UUID_REGEX})$`]],
                 ["/core/sources", msg("Federation and Social login"), [`^/core/sources/(?<slug>${SLUG_REGEX})$`]],
                 ["/core/tokens", msg("Tokens and App passwords")],
-                ["/flow/stages/invitations", msg("Invitations")]]],
+                ["/flow/stages/invitations", msg("Invitations")],
+                ["/policy/reputation", msg("Reputation scores")],
+            ]],
             [null, msg("System"), null, [
-                ["/core/brands", msg("Brands")],
+                // ["/core/brands", msg("Brands")],
                 ["/crypto/certificates", msg("Certificates")],
-                ["/outpost/integrations", msg("Outpost Integrations")],
+                // ["/outpost/integrations", msg("Outpost Integrations")],
                 ["/admin/settings", msg("Settings")]]],
         ];
 
@@ -172,7 +177,6 @@ export class AkAdminSidebar extends WithCapabilitiesConfig(AKElement) {
         //     ${this.renderEnterpriseMenu()}
         // `;
         return html`
-        ${this.renderNewVersionMessage()}
         ${this.renderImpersonationMessage()}
         ${map(sidebarContent, renderOneSidebarItem)}
     `;

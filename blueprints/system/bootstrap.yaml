@@ -26,7 +26,7 @@ entries:
     identifiers:
       username: !Context username
     attrs:
-      name: authentik Default Admin
+      name: nextzen Default Admin
       email: !Context email
       groups:
         - !KeyOf admin-group

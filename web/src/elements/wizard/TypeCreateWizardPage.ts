@@ -82,9 +82,15 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                 const componentName = type.modelName.includes(".")
                     ? (type.modelName.split(".")[1] ?? "--unknown--")
                     : type.modelName;
-                return html`<div
+                // return html`<div
+                //     class="pf-l-grid__item pf-m-3-col pf-c-card ${requiresEnterprise
+                //         ? "pf-m-non-selectable-raised"
+                //         : "pf-m-selectable-raised"} ${this.selectedType == type
+                //         ? "pf-m-selected-raised"
+                //         : ""}"
+                    return html`<div
                     class="pf-l-grid__item pf-m-3-col pf-c-card ${requiresEnterprise
-                        ? "pf-m-non-selectable-raised"
+                        ? "pf-m-selectable-raised"
                         : "pf-m-selectable-raised"} ${this.selectedType == type
                         ? "pf-m-selected-raised"
                         : ""}"
@@ -92,9 +98,9 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                     data-ouid-component-type="ak-type-create-grid-card"
                     data-ouid-component-name=${componentName}
                     @click=${() => {
-                        if (requiresEnterprise) {
-                            return;
-                        }
+                        // if (requiresEnterprise) {
+                        //     return;
+                        // }
                         this.selectDispatch(type);
                         this.selectedType = type;
                     }}
@@ -109,8 +115,10 @@ export class TypeCreateWizardPage extends WithLicenseSummary(WizardPage) {
                     <div class="pf-c-card__title">${type.name}</div>
                     <div class="pf-c-card__body">${type.description}</div>
                     ${requiresEnterprise
-                        ? html`<div class="pf-c-card__footer">
-                              <ak-license-notice></ak-license-notice>
+                        ? html`<div class="pf-c-card__footer hidden">
+                              <ak-license-notice hidden0
+                              
+                              ></ak-license-notice>
                           </div> `
                         : nothing}
                 </div>`;

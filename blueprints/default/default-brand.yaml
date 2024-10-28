@@ -25,7 +25,7 @@ entries:
       flow_user_settings:
         !Find [authentik_flows.flow, [slug, default-user-settings-flow]]
     identifiers:
-      domain: authentik-default
+      domain: nextzen-default
       default: true
     state: created
     conditions:
